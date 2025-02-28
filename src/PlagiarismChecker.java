@@ -40,8 +40,27 @@ public class PlagiarismChecker {
             fill++;
         }
 
+        //iteratre through array
+        for(int i = 1; i < doc1.length(); i++)
+        {
+            for(int j = 1; j < doc2.length();j++)
+            {
+                //if the letters match, it'll increase the length of longestSubstring
+                if(doc1.charAt(i) == doc2.charAt(j))
+                {
+                    inspectionTable[i][j] = inspectionTable[i - 1][j - 1] + 1;
+                }
+                else
+                {
+                    //if they don't match, use max() on the i -1 and j-1 tables
+                    inspectionTable[i][j] = Math.max(inspectionTable[i - 1][j], inspectionTable[i][j-1]);
 
-        return 0;
+                }
+
+            }
+        }
+
+        return inspectionTable[doc1.length()][doc2.length()];
     }
 
 }

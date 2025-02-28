@@ -1,10 +1,11 @@
 Name: Damian Villarreal-Ayala 
 
-| Date    |  Time   |                                                                                                                                                                                                        Update |
-|:--------|:-------:|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| April 5 | 9-10pm  |                                                                                                                                                                    I tried to write abstract, efficient code. |
-| Feb 25  | 11-12pm |                                                                                      Spent time thinking through the problem and writing notes to help me understand the problem and ideate ways to solve it. |
-| Feb 27  | 9-10am  | Spent most of class trying to think thru and understand the idea behind checking the diagonal/(left n up). Watched and worked at the board for the majority of the class and started to fill in the 2d array. |
+| Date    |  Time   |                                                                                                                                                                                                                                                                                                     Update |
+|:--------|:-------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| April 5 | 9-10pm  |                                                                                                                                                                                                                                                                 I tried to write abstract, efficient code. |
+| Feb 25  | 11-12pm |                                                                                                                                                                                   Spent time thinking through the problem and writing notes to help me understand the problem and ideate ways to solve it. |
+| Feb 27  | 9-10am  |                                                                                              Spent most of class trying to think thru and understand the idea behind checking the diagonal/(left n up). Watched and worked at the board for the majority of the class and started to fill in the 2d array. |
+| Feb 28  | 11-12am | Using the notes from class and pictures of the board, i finished iterating through my board and have created the if statements for when the characters match and when they don't. However, something is wrong with the tester file and I need to ask Mr. Blick for help before being able to test my code. |
 
 
 To add a new row to the table, click into a cell and then hit shift-enter.
