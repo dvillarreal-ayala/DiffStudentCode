@@ -28,6 +28,7 @@ public class PlagiarismChecker {
         int[][] inspectionTable = new int[doc1.length() + 1][doc2.length() + 1];
 
         //iterate through array
+        //By starting with i and j at 1, we can leave the first row and column empty.
         for(int i = 1; i <= doc1.length(); i++)
         {
             for(int j = 1; j <= doc2.length();j++)
@@ -35,19 +36,18 @@ public class PlagiarismChecker {
                 //if the letters match, it'll increase the length of longestSubstring
                 if(doc1.charAt(i - 1) == doc2.charAt(j - 1))
                 {
+                    //We set the value of inspectionTable[i][j] to the value of the diagonal square + 1.
+                    //It's impossible to increase the value by more than one cuz we're not adding more than one letter at a time.
                     inspectionTable[i][j] = inspectionTable[i - 1][j - 1] + 1;
                 }
                 else
                 {
-                    //if they don't match, use max() on the i -1 and j-1 tables
+                    //if they don't match, use max() on the (i - 1) and (j - 1) tables
                     inspectionTable[i][j] = Math.max(inspectionTable[i - 1][j], inspectionTable[i][j - 1]);
-
                 }
 
             }
         }
-
         return inspectionTable[doc1.length()][doc2.length()];
     }
-
 }
