@@ -26,34 +26,21 @@ public class PlagiarismChecker {
         // TODO Complete this function to return the length of the longest shared substring.
         //Adding one to the length to include a "buffer"/empty space that can serve as "base cases".
         int[][] inspectionTable = new int[doc1.length() + 1][doc2.length() + 1];
-        int  fill = 0;
-        //Goes through and fills first row and column with 0.
-        while(fill < doc1.length())
-        {
-            inspectionTable[fill][0] = 0;
-            fill++;
-        }
-        fill = 0;
-        while(fill < doc2.length())
-        {
-            inspectionTable[0][fill] = 0;
-            fill++;
-        }
 
-        //iteratre through array
-        for(int i = 1; i < doc1.length(); i++)
+        //iterate through array
+        for(int i = 1; i <= doc1.length(); i++)
         {
-            for(int j = 1; j < doc2.length();j++)
+            for(int j = 1; j <= doc2.length();j++)
             {
                 //if the letters match, it'll increase the length of longestSubstring
-                if(doc1.charAt(i) == doc2.charAt(j))
+                if(doc1.charAt(i - 1) == doc2.charAt(j - 1))
                 {
                     inspectionTable[i][j] = inspectionTable[i - 1][j - 1] + 1;
                 }
                 else
                 {
                     //if they don't match, use max() on the i -1 and j-1 tables
-                    inspectionTable[i][j] = Math.max(inspectionTable[i - 1][j], inspectionTable[i][j-1]);
+                    inspectionTable[i][j] = Math.max(inspectionTable[i - 1][j], inspectionTable[i][j - 1]);
 
                 }
 
